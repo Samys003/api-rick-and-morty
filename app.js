@@ -9,22 +9,37 @@
 
     const response = await fetch(url)
     const characters = await response.json()
-     
-    return characters
+    
+    
+     return characters.results
+    
 
     
 }
 
- function estilodasImagens(){
+ async function estilodasImagens(){
+    const imagens = document.getElementById('imagens')
+    const container = document.getElementById('container')
+    const personagens = await preExibicao()
 
-    const container = document.getElementById('imagens')
-    const imagem = document.createElement('img')
+   
+    const limited = personagens.slice(0,6)
+  
+    limited.forEach(function(personagem){
+        const imagem = document.createElement('img')
+        const nome = document.createElement('p')
 
-    container.appendChild(imagem)
+        imagem.src = personagem.image
+        nome.textContent = personagem.name
+        
+        container.appendChild(imagem)
+        container.appendChild(nome)
+       
+     
 
-
+    })  
 
 }
 
-preExibicao()
+estilodasImagens()
 
