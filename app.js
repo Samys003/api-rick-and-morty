@@ -23,7 +23,7 @@
     const personagens = await preExibicao()
 
    
-    const limited = personagens.slice(0,6)
+    const limited = personagens.slice(0,8)
   
     limited.forEach(function(personagem){
         const imagem = document.createElement('img')
