@@ -19,7 +19,7 @@
 
  async function estilodasImagens(){
     const imagens = document.getElementById('imagens')
-    const container = document.getElementById('container')
+    const cards = document.getElementById('cards')
     const personagens = await preExibicao()
 
    
@@ -28,12 +28,17 @@
     limited.forEach(function(personagem){
         const imagem = document.createElement('img')
         const nome = document.createElement('p')
+        const card = document.createElement('div')
 
         imagem.src = personagem.image
         nome.textContent = personagem.name
+
+        card.appendChild(imagem)
+        card.appendChild(nome)
+        card.classList.add('card')
         
-        container.appendChild(imagem)
-        container.appendChild(nome)
+        cards.appendChild(card)
+        
        
      
 
