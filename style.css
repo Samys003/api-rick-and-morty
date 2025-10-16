@@ -6,7 +6,7 @@
 }
 
 body{
-    overflow-x: hidden; 
+    overflow-x: hidden;
     width: 100vw;
     background-image: linear-gradient(to bottom ,rgb(20, 21, 41), rgb(70, 73, 143));
     background-repeat: no-repeat;
@@ -40,7 +40,27 @@ input{
     color: rgb(34, 27, 27);
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
+    border-inline: none;
+    background-color: #EEE;
+    outline: none;
 }
+
+.input-sugestion{
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 335px;
+    background-color: #EEE;
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 250px;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+
 button{
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
@@ -48,7 +68,7 @@ button{
     width: 35px;
     height: 40px;
     font-size: 17px;
-    background-color: white;
+    background-color: #EEE;
 }
 .image img{
     margin-top: 5px;
@@ -102,6 +122,8 @@ h1{
 #cards img{
     width: 250px;
     height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
 }
 
 .card{
@@ -113,3 +135,8 @@ h1{
     justify-content: center;
     width: 23%;
 }  
+
+.card img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}

@@ -1,7 +1,5 @@
 'use strict'
 
-
-
  async function preExibicao() {
     const url = `https://rickandmortyapi.com/api/character/`
 
@@ -30,21 +28,39 @@
         const nome = document.createElement('p')
         const card = document.createElement('div')
 
+          card.onclick = function(){
+            detalhes(personagem.id)
+        }
+        
+
         imagem.src = personagem.image
-        nome.textContent = personagem.name
+        nome.textContent = personagem.name 
+
+      
 
         card.appendChild(imagem)
         card.appendChild(nome)
+      
         card.classList.add('card')
         
         cards.appendChild(card)
         
-       
+      
      
 
     })  
 
 }
 
+async function detalhes(id) {
+
+    window.location.href = `./paginas/detalhes.html?personagemId=${id}`
+    
+}
+
+
+
+
 estilodasImagens()
+
 
