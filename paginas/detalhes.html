@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +9,48 @@
     <script src="./detalhes.js" defer type="module"></script>
     <title>Api Rick And Morty</title>
 </head>
+
 <body>
     <header>
-     <div class="search">
-            <input type="text" name="Insira um personagem ou episodio..." id="input">
+        <div class="search">
+            <input type="text" placeholder="Digite um personagem, id localização ou ep..." id="input"
+                autocomplete="off">
             <button id="search">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
-           
+            <div class="input-sugestion" id="input-sugestion">
+                <a href="">Mais resultados</a>
+            </div>
         </div>
         <main id="main"></main>
         <footer>
-            <h3>@samara Santos</h3>
+            <div class="informacoes">
+                <div class="documentacao">
+                    <h3>Documentação API:</h3>
+                    <li>
+                        <a href="https://rickandmortyapi.com/">Documentação Api Rick and Morty</a>
+                    </li>
+                </div>
+                <div class="redes">
+                    <h3>Minhas Redes Sociais:</h3>
+                    <li class="redes">
+                        <div>
+                            <i class="fa-brands fa-github"></i>
+                            <a href="https://github.com/Samys003">GitHub</a>
+                        </div>
+                        <div>
+                            <i class="fa-brands fa-instagram"></i>
+                            <a href="https://www.instagram.com/samara.santtos03">Instagram</a>
+                        </div>
+                        <div>
+                            <i class="fa-brands fa-linkedin"></i>
+                            <a href="https://www.linkedin.com/in/samara-santos-9793131a1/">Linkedin</a>
+                        </div>
+                    </li>
+                </div>
+            </div>
         </footer>
     </header>
 </body>
+
 </html>

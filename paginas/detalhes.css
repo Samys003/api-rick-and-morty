@@ -9,10 +9,10 @@
 body{
     overflow-x: hidden; 
     width: 100vw;
-    height: 100vh;
     background-image: linear-gradient(to bottom ,rgb(20, 21, 41), rgb(70, 73, 143));
     background-repeat: no-repeat;
 }
+
 header{
     gap: 5px;
     width: 100vw;
@@ -30,7 +30,9 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
+
 input{
     border: solid white;
     display: flex;
@@ -41,7 +43,44 @@ input{
     color: rgb(34, 27, 27);
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
+    border-inline: none;
+    background-color: #EEE;
+    outline: none;
 }
+
+.input-sugestion{
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 335px;
+    background-color: #EEE;
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 250px;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.sugestao-item{
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.sugestao-item:hover{
+    background-color: #f0f0f0;
+}
+
+.sugestao-item img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
 button{
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
@@ -49,8 +88,9 @@ button{
     width: 35px;
     height: 40px;
     font-size: 17px;
-    background-color: white;
+    background-color: #EEE;
 }
+
 main{
     width: 100vw;
     height: 80vh;
@@ -99,4 +139,54 @@ main{
 
 footer{
     width: 100vw;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 27vh;
+}
+
+.documentacao{
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    width: 50vw;
+    height: 20vh;
+      
+}
+
+.documentacao h3{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+.documentacao li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+
+.redes{  
+    gap: 50px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+    height: 20vh;
+}
+.informacoes{
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EEE;
+    width: 80vw;
+    height: 25vh;
+}
+
+.informacoes a{
+    color: black;
 }

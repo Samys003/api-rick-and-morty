@@ -80,7 +80,7 @@ async function funcaoInput() {
 function exibirSugestoes (personagem, contemSugestao) {
     contemSugestao.innerHTML = '';
 
-    personagem.slice(0,5).forEach(function(personagem){
+    personagem.forEach(function(personagem){
         const item = document.createElement('div')
         item.classList.add('sugestao-item')
     
