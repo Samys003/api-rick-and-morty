@@ -58,8 +58,48 @@ async function detalhes(id) {
     
 }
 
+async function funcaoInput() {
+    const input = document.getElementById('input')
+    const inputSugestion =  document.getElementById('input-sugestion')
+
+    input.addEventListener('input', async (e) => {
+        const termo = e.target.value.trim()
+
+        const urlBuscaNome = `https://rickandmortyapi.com/api/character/?name=${termo}`;
+    
+
+        const response = await fetch(urlBuscaNome)
+        const data = await response.json()
+
+        exibirSugestoes(data.results , inputSugestion)
 
 
+    })
+}
+
+function exibirSugestoes (personagem, contemSugestao) {
+    contemSugestao.innerHTML = '';
+
+    personagem.slice(0,5).forEach(function(personagem){
+        const item = document.createElement('div')
+        item.classList.add('sugestao-item')
+    
+    item.innerHTML =`
+        <img src="${personagem.image}" alt="${personagem.name}">
+        <span>${personagem.name}</span>`
+
+    item.addEventListener('click' , () => {
+        detalhes(personagem.id)
+    })
+
+        contemSugestao.appendChild(item)
+
+    })
+
+    contemSugestao.style.display = 'block'
+}
+
+funcaoInput()
 
 estilodasImagens()
 

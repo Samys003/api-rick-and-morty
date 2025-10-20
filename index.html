@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="shotcut icon" href="./img/rick-and-morty-orange-folder-icon-3.png" type="imagem/png">
     <link rel="stylesheet" href="./style.css">
     <script src="app.js" defer type="module"></script>
     <title>Api Rick And Morty</title>
@@ -13,11 +14,14 @@
 <body>
     <header>
         <div class="search">
-            <input type="text" placeholder="Digite um personagem, id localização ou ep..." id="input">
+            <input type="text" placeholder="Digite um personagem, id localização ou ep..." id="input"
+                autocomplete="off">
             <button id="search">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
-             <div class="input-sugestion" id="input-sugestion"></div>
+            <div class="input-sugestion" id="input-sugestion">
+                <a href="">Mais resultados</a>
+            </div>
         </div>
         <div class="image">
             <img src="./img/rick-and-morty-hd-computer-rqcahm6yzm4ffzpa 1 (3).jpg" alt="">
@@ -26,13 +30,22 @@
     <main>
         <h1>API Rick and Morty</h1>
         <div class="container">
-        <div class="cards" id="cards">
-            <div id="imagens" class="imagens"></div>
-        </div>
+            <div class="cards" id="cards">
+                <div id="imagens" class="imagens"></div>
+            </div>
         </div>
     </main>
     <footer>
-
+        <div class="documentacao">
+            <a href="">Documentação da Api Rick and Morty</a>
+            </div>
+            <div class="redes">
+                <span>Minhas Redes Sociais</span>
+                <a href="">GitHub</a>
+                <a href="">Instagram</a>
+                <a href="">Linkedin</a>
+            </div>
+        
     </footer>
 </body>
 
